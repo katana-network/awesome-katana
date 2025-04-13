@@ -6,7 +6,13 @@ A list of awesome Katana resources. For contributions, please see the bottom of 
 
 ### Developing
 
-TBD
+- [SpecialK](https://github.com/0xPolygon/specialk) - the Katana Starter Kit
+
+### Tools
+
+- [Katana Contract Directory](https://contractdir.bruno.id)
+- [Katana block explorer](https://explorer.katana.network/) / [Tatara block explorer](https://explorer.tatara.katana.network/)
+- [Katana Flywheel Simulator](https://flywheel.bruno.id)
 
 ### Examples
 

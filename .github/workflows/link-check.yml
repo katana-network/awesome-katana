@@ -1,0 +1,17 @@
+name: Link Checker
+on:
+  schedule:            # every weekday at 04:20
+    - cron:  '20 4 * * 1-5'
+  workflow_dispatch:   # allow manual runs
+permissions:
+  contents: read
+  issues:   write      # lets the action open/refresh a tracking issue
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v1
+        with:
+          # check every markdown file in the repo
+          args: --verbose --no-progress --config .lychee.toml .

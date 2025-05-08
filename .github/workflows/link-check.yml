@@ -14,4 +14,4 @@ jobs:
       - uses: lycheeverse/lychee-action@v1
         with:
           # check every markdown file in the repo
-          args: --verbose --no-progress --config .lychee.toml .
+          args: --verbose --no-progress

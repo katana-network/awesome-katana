@@ -1,19 +1,61 @@
 name: Link Checker
+
 on:
-  schedule:            # every weekday at 04:20
-    - cron:  '20 4 * * 1-5'
-  workflow_dispatch:   # allow manual runs
+  # every weekday at 04:20 UTC
+  schedule:
+    - cron: '20 4 * * 1-5'
+  # manual trigger button in the Actions tab
+  workflow_dispatch:
+
+# allow the action to read code and, if desired, open / update an issue
 permissions:
   contents: read
-  issues:   write      # lets the action open/refresh a tracking issue
+  issues: write
+
 jobs:
-  links:
+  link-check:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: lycheeverse/lychee-action@v2
-        env: 
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # avoids GH rate-limits
+      # 1. pull the repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. cache lychee’s results so successive runs are faster
+      - name: Restore lychee cache
+        uses: actions/cache@v4
         with:
-          # check every markdown file in the repo
-          args: --verbose --no-progress
+          path: .lycheecache
+          key: lychee-${{ runner.os }}-${{ github.sha }}
+          restore-keys: lychee-${{ runner.os }}-
+
+      # 3. run lychee itself
+      - name: Run lychee link checker
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        env:
+          # use the built-in token so lychee can burn GH API credits
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # CLI flags
+          args: --verbose --no-progress --cache --max-cache-age 1d .
+          # CI behaviour tweaks
+          fail: false        # do not mark the job as failed on dead links
+          jobSummary: true   # nice table in the run summary
+
+      # 4. keep the raw report as an artifact for quick download
+      - name: Upload lychee report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lychee-report
+          path: ./lychee/out.md
+
+      # 5. open (or refresh) a single tracking issue when links are broken
+      - name: Create / update “Broken links” issue
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Broken links detected
+          content-filepath: ./lychee/out.md
+          labels: automated issue, links

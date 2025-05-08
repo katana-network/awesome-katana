@@ -11,7 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: lycheeverse/lychee-action@v1
+      - uses: lycheeverse/lychee-action@v2
+        env: 
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # avoids GH rate-limits
         with:
           # check every markdown file in the repo
           args: --verbose --no-progress

@@ -6,7 +6,7 @@ A list of awesome Katana resources. For contributions, please see the bottom of 
 
 ### Developing
 
-- [SpecialK](https://github.com/0xPolygon/specialk) - the Katana Starter Kit
+- [SpecialK](https://github.com/katana-network/specialk) - the Katana Starter Kit
 
 ### Tools
 

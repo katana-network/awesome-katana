@@ -10,9 +10,9 @@ A list of awesome Katana resources. For contributions, please see the bottom of 
 
 ### Tools
 
-- [Katana Contract Directory](https://contractdir.bruno.id)
-- [Katana block explorer](https://explorer.katana.network/) / [Tatara block explorer](https://explorer.tatara.katana.network/)
-- [Katana Flywheel Simulator](https://flywheel.bruno.id)
+- [Katana Contract Directory](https://contractdir.katana.tools)
+- Katana block explorer (coming soon) / [Tatara block explorer](https://explorer.tatara.katana.network/)
+- [Katana Flywheel Simulator](https://contracts.katana.tools)
 
 ### Examples
 

@@ -1,6 +1,7 @@
 # Awesome Katana
 
 A list of awesome Katana resources. For contributions, please see the bottom of the file.
+For a visual and searchable list, see also [Katana tools](https://katana.tools).
 
 ## Resources
 
@@ -10,6 +11,7 @@ A list of awesome Katana resources. For contributions, please see the bottom of 
 
 ### Tools
 
+- [Katana tools - Searchable list of tools](https://katana.tools)
 - [Katana Contract Directory](https://contracts.katana.tools)
 - Katana block explorer (coming soon) / [Tatara block explorer](https://explorer.tatara.katana.network/)
 - [Katana Flywheel Simulator](https://flywheel.katana.tools)

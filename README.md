@@ -14,11 +14,16 @@ For a visual and searchable list, see also [Katana tools](https://katana.tools).
 - [Katana tools - Searchable list of tools](https://katana.tools)
 - [Katana Contract Directory](https://contracts.katana.tools)
 - Katana block explorer (coming soon) / [Tatara block explorer](https://explorer.tatara.katana.network/)
-- [Katana Flywheel Simulator](https://flywheel.katana.tools)
+
+### Fun
+
+- [Katana Flywheel Simulator](https://flywheel.katana.tools) - a DeFi simulator
+- [Katana game](https://katana-game.netlify.app/) - a DeFi simulator
 
 ### Examples
 
-TBD
+- [Integrate Privy - client side](https://docs.katana.network/katana/how-to/add-privy/)
+- [Use MCP with Katana in local development](https://docs.katana.network/katana/get-started/use-mcp)
 
 ### Blogs and Threads
 

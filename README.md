@@ -23,7 +23,7 @@ For a visual and searchable list, see also [Katana tools](https://katana.tools).
 ### Examples
 
 - [Integrate Privy - client side](https://docs.katana.network/katana/how-to/add-privy/)
-- [Use MCP with Katana in local development](https://docs.katana.network/katana/get-started/use-mcp)
+- [Use MCP with Katana in local development](https://docs.katana.network/katana/get-started/use-mcp/)
 
 ### Blogs and Threads
 

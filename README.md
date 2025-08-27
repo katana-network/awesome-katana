@@ -15,7 +15,7 @@ For a visual and searchable list, see also [Katana tools](https://katana.tools).
 - [Katana Contract Directory](https://contracts.katana.tools)
 - [Katana Explorer (Etherscan)](https://katanascan.com) / [Katana Explorer (Blockscout)](https://explorer.katanarpc.com/)
 - [Tatara block explorer](https://explorer.tatara.katana.network/)
-- [Hacker Springboard](http://hack.katana.tools)
+- [Hacker Springboard](https://hack.katana.tools)
 - [Superdocs](https://superdocs.katana.tools/)
 - [Faucet](https://faucet.katana.tools)
 

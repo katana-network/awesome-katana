@@ -8,6 +8,7 @@ For a visual and searchable list, see also [Katana tools](https://katana.tools).
 ### Developing
 
 - [SpecialK](https://github.com/katana-network/specialk) - the Katana Starter Kit
+- [Katana RPC (Tatum)] (https://tatum.io/chain/katana)
 
 ### Tools
 
@@ -18,6 +19,7 @@ For a visual and searchable list, see also [Katana tools](https://katana.tools).
 - [Hacker Springboard](https://hack.katana.tools)
 - [Superdocs](https://superdocs.katana.tools/)
 - [Faucet](https://faucet.katana.tools)
+- [Katana Trading Overview (Tatum)] (https://apps.tatum.io/katana-trader-info)
 
 ### Fun
 
